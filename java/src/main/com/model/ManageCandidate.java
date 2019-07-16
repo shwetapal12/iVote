@@ -61,6 +61,13 @@ public class ManageCandidate {
 	public void setPincode(String pincode) {
 		this.pincode = pincode;
 	}
+
+
+	@Override
+	public String toString() {
+		return "ManageCandidate [candidateId=" + candidateId + ", candidateName=" + candidateName + ", city=" + city
+				+ ", pincode=" + pincode + "]";
+	}
 		
 	
 	

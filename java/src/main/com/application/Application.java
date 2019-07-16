@@ -3,8 +3,6 @@ package com.application;
 import java.util.List;
 import javax.persistence.criteria.*;
 import org.hibernate.*;
-import org.hibernate.query.Query;
-
 import com.model.ManageCandidate;
 import com.util.HibernateGet;
 
@@ -34,7 +32,7 @@ public class Application {
 		
 		finally{
 			
-				//session.close();
+				session.close();
 		
 		}
 	}

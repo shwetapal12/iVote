@@ -11,7 +11,7 @@ import javax.persistence.criteria.Root;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.query.Query;
+import org.hibernate.*;
 
 import com.model.ManageCandidate;
 
@@ -46,6 +46,49 @@ public class ManageCandidateImpl implements ManageCandidateDao {
 
         return eList;
 	}
+
+	public int insert(ManageCandidate p) {
+		Session session =null;
+		Transaction tx=null;
+	int id= 0;
+	
+		try{
+			session=HibernateGet.getSession();
+			tx = session.beginTransaction();
+
+	      id= (Integer) session.save(p);
+	    //  System.out.println();
+	         tx.commit();		
+		}finally{
+		session.close();
+		//HibernateUtil.closeSessionFactory();
+        }
+		
+		return id;
+	}
+
+	public int delete(int id) {
+		Session session =null;
+		Transaction tx=null;
+		try{
+			session=HibernateGet.getSession();
+			tx = session.beginTransaction();
+            ManageCandidate m= session.get(ManageCandidate.class, id);
+            session.delete(m);
+	    
+	         tx.commit();		
+		}catch (HibernateException e) {
+			e.printStackTrace();
+		}
+		finally{
+		session.close();
+		//HibernateUtil.closeSessionFactory();
+        }
+		
+		return id;
+		
+	}
+	
 
 	}
 
