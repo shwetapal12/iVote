@@ -29,23 +29,23 @@
            
                   <ul class="navbar-nav mr-auto offset-3">
             <li class="nav-item ">
-                <a href="#" class="nav-link active">Home</a>
+                <a href="Home.jsp" class="nav-link active">Home</a>
             </li>&emsp;
-             <li class="nav-item">
+             <!-- <li class="nav-item">
                 <a href="#" class="nav-link">Manage Adminstration</a>
             </li>&emsp;
             
              <li class="nav-item ">
                 <a href="#" class="nav-link">Manage City</a>
-            </li>&emsp;
+            </li>&emsp; -->
              <li class="nav-item">
-                <a href="ManageCandidate.jsp" class="nav-link">Manage Candidate</a>
+                <a href="Ajax.jsp" class="nav-link">Manage Candidate</a>
             </li>  &emsp; 
              <li class="nav-item">
-                <a href="#" class="nav-link">Poll Result</a>
+                <a href="PollResult.jsp" class="nav-link">Poll Result</a>
             </li> &emsp;
              <li class="nav-item">
-                <a href="#" class="nav-link">Logout</a>
+                <a href="Logout" class="nav-link">Logout</a>
             </li> &emsp;
             </ul>
              

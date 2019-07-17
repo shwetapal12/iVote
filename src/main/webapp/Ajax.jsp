@@ -47,14 +47,17 @@ $.ajax({
 </script>
 </head>
 <body>
-<div>
+<br><br>
+<div class="container">
+
+<% out.print(session.getAttribute("name")); %>
   <form class="form" >
                 <div class="form-group ">
                     <label class="col-3"><b>Candidate Name</b></label>
                     <input type="text" id ="CandidateName"  name="CandidateName" placeholder="Candidate Name" class="form-control col-12" required="required">
                 </div>
                 
-<div class="form-group ">
+<div class="form-group">
                     <label class="col-3"><b>City</b></label>
                     <input type="text" placeholder="City" name="City" class="form-control col-12" id="City" required="required">
                 </div> 
@@ -66,8 +69,10 @@ $.ajax({
             
 				</div>                      
         </form>
-        <button id="sub">Submit</button>
-        </div>
-        <div id="demo"></div>
+        <button id="sub" class="btn btn-success btn-block">Add Candidate</button>
+        </div><br><br>
+        <h3 style="color: blue ;font-family: Sans-serif ; text-align: center;">Available Candidates</h3><br>
+        <div id="demo" class="container"></div>
 </body>
+ <%@include file="Footer.jsp" %> 
 </html>

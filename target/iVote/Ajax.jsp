@@ -47,7 +47,8 @@ $.ajax({
 </script>
 </head>
 <body>
-<div>
+<br><br>
+<div class="container">
   <form class="form" >
                 <div class="form-group ">
                     <label class="col-3"><b>Candidate Name</b></label>
@@ -66,8 +67,10 @@ $.ajax({
             
 				</div>                      
         </form>
-        <button id="sub">Submit</button>
-        </div>
-        <div id="demo"></div>
+        <button id="sub" class="btn btn-success btn-block">Add Candidate</button>
+        </div><br><br>
+        <h3 style="color: blue ;font-family: Sans-serif ; text-align: center;">Available Candidates</h3><br>
+        <div id="demo" class="container"></div>
 </body>
+ <%@include file="Footer.jsp" %> 
 </html>

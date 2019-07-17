@@ -4,30 +4,8 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-  	<servlet-name>loginServlet</servlet-name>
-  	<display-name>loginServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.login.loginServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>InsertCandidate</servlet-name>
-  	<display-name>InsertCandidate</display-name>
-  	<description></description>
-  	<servlet-class>com.controller.InsertCandidate</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>deleteCandidate</servlet-name>
-  	<display-name>deleteCandidate</display-name>
-  	<description></description>
-  	<servlet-class>com.controller.deleteCandidate</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>ShowCandidate</servlet-name>
-  	<display-name>ShowCandidate</display-name>
-  	<description></description>
-  	<servlet-class>com.controller.ShowCandidate</servlet-class>
-  </servlet>
+  
+  
   <servlet>
   	<servlet-name>ShowCandidates</servlet-name>
   	<display-name>ShowCandidates</display-name>
@@ -46,10 +24,19 @@
   	<description></description>
   	<servlet-class>com.login.InsertCandidates</servlet-class>
   </servlet>
-  <servlet-mapping>
-  	<servlet-name>loginServlet</servlet-name>
-  	<url-pattern>/loginServlet</url-pattern>
-  </servlet-mapping>
+  <servlet>
+  	<servlet-name>adminLogin</servlet-name>
+  	<display-name>adminLogin</display-name>
+  	<description></description>
+  	<servlet-class>com.controllers.adminLogin</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Logout</servlet-name>
+  	<display-name>Logout</display-name>
+  	<description></description>
+  	<servlet-class>com.controllers.Logout</servlet-class>
+  </servlet>
+ 
   <servlet-mapping> 
   	<servlet-name>ShowCandidates</servlet-name>
   	<url-pattern>/ShowCandidates</url-pattern>
@@ -61,5 +48,13 @@
   <servlet-mapping>
   	<servlet-name>InsertCandidates</servlet-name>
   	<url-pattern>/InsertCandidates</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>adminLogin</servlet-name>
+  	<url-pattern>/adminLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Logout</servlet-name>
+  	<url-pattern>/Logout</url-pattern>
   </servlet-mapping>
 </web-app>
