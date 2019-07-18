@@ -1,4 +1,4 @@
-package com.controller;
+package com.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,29 +11,25 @@ import javax.servlet.http.HttpSession;
 
 import org.hibernate.Session;
 
-/**
- * Servlet implementation class Logout
- */
 public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+   
     public Logout() {
         super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+     
+    }	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out= response.getWriter();
 		HttpSession session = request.getSession(false);
-		out.print(session.getAttribute("name"));
-		session.invalidate();
-		response.sendRedirect("Adminlogin.jsp");
+		
+//		session.invalidate();
+//		request.getSession().invalidate();
+//		response.sendRedirect("Adminlogin.jsp");
+		 session.removeAttribute("name");
+		    session.invalidate();
+		    response.sendRedirect("Adminlogin.jsp");		   
+	
 		
 	}
 

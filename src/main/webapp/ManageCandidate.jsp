@@ -26,6 +26,8 @@
       
 </head>
   <body style="background-color:orange">
+  <%  session = request.getSession(false);
+  response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");%>
 
         
 <%

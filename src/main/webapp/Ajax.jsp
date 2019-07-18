@@ -47,10 +47,16 @@ $.ajax({
 </script>
 </head>
 <body>
+<%  session = request.getSession(false);
+response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+if (session.getAttribute("name") != null)
+	{
+%>
+<h4 class="text-success">Welcome <%out.print(session.getAttribute("name")); %></h4>
+
 <br><br>
 <div class="container">
 
-<% out.print(session.getAttribute("name")); %>
   <form class="form" >
                 <div class="form-group ">
                     <label class="col-3"><b>Candidate Name</b></label>
@@ -76,3 +82,9 @@ $.ajax({
 </body>
  <%@include file="Footer.jsp" %> 
 </html>
+<% }
+else
+{
+		response.sendRedirect("Logout");
+	}
+	%>

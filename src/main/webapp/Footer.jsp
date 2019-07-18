@@ -16,7 +16,7 @@
    <link href="Css/footer.css" rel="stylesheet">
 </head>
 
-<footer class="container-fluid bg-grey py-5 footer ">
+<footer class="container-fluid bg-grey py-5 footer">
 <div class="container">
    <div class="row">
       <div class="col-md-6">

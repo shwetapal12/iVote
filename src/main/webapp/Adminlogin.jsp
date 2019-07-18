@@ -13,11 +13,20 @@
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link href="Login.css" rel="stylesheet" type="text/css"/>
+<link href="Css/Login.css" rel="stylesheet" type="text/css"/>
+
 </head>
 <body>
-	
-	
+<% // session = request.getSession(false);
+response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+
+if (session.getAttribute("name") != null)
+	{
+	response.sendRedirect("Logout");
+	}
+else{
+%>
+
 	<div class="container h-100">
 		<div class="d-flex justify-content-center h-100">
 			<div class="user_card">
@@ -28,20 +37,25 @@
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
-                    <!-- <form action="Home.jsp" method="post"> -->
-                    <form action="adminLogin" method="post">
+                 <!--   <form action="Home.jsp" method="post">  -->
+                    <form action="adminLogin" method="post"> 
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" name="UserName" class="form-control input_user"  placeholder="username">
+							<input type="text" name="UserName" id="UserName" class="form-control input_user"  placeholder="username">
 						</div>
 						<div class="input-group mb-2">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="Password" class="form-control input_pass"  placeholder="password">
+							<input type="password" name="Password"  id="Password" class="form-control input_pass"  placeholder="password">
 						</div>
+						<span class="text-danger"><% if(null!=request.getAttribute("errorMessage"))
+			   				 {
+			        			out.println(request.getAttribute("errorMessage"));
+			   				 }
+						%></span>
 						<div class="form-group">
 							<div class="custom-control custom-checkbox">
 								<input type="checkbox" class="custom-control-input" id="customControlInline">
@@ -62,8 +76,14 @@
                                             <a href="#">Forgot your password?</a>
 					</div>
 				</div>
+								
 			</div>
 		</div>
 	</div>
 </body>
+
 </html>
+<% 	}	%>
+
+
+
