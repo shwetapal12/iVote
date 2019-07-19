@@ -36,7 +36,7 @@
   	<description></description>
   	<servlet-class>com.controllers.Logout</servlet-class>
   </servlet>
- 
+  
   <servlet-mapping> 
   	<servlet-name>ShowCandidates</servlet-name>
   	<url-pattern>/ShowCandidates</url-pattern>
@@ -56,5 +56,13 @@
   <servlet-mapping>
   	<servlet-name>Logout</servlet-name>
   	<url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>servlet1</servlet-name>
+  	<url-pattern>/servlet1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>servlet2</servlet-name>
+  	<url-pattern>/servlet2</url-pattern>
   </servlet-mapping>
 </web-app>

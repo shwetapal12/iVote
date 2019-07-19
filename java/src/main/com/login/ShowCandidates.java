@@ -57,7 +57,7 @@ public class ShowCandidates extends HttpServlet {
 		   
 			 out.write ("<tr><td>"+manage_Candidate.getCandidateName()+
 						"</td><td>"+manage_Candidate.getCity()+"</td><td>"+manage_Candidate.getPincode()+
-						"</td><td> <a href='deleteCandidates?id="+manage_Candidate.candidateId+"'"
+						"</td><td> <a href='deleteCandidates?id="+manage_Candidate.getCandidateId()+"'"
 								+ " class='btn btn-danger'>Delete Me</a></td></tr>");
 			 
 		}

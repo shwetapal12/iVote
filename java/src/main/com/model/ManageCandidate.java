@@ -3,24 +3,42 @@ package com.model;
 public class ManageCandidate {
 
 	
-	public int candidateId;
-	public String candidateName;
-	public String city;
-	public String pincode;
+	private int candidateId;
+	private String candidateName;
+	private String city;
+	private String pincode;
+	private int numbercount;
 	
 	
-	public ManageCandidate(int candidateId, String candidateName, String city, String pincode) {
+	
+
+	public ManageCandidate(int candidateId, String candidateName, String city, String pincode, int numbercount) {
 		super();
 		this.candidateId = candidateId;
 		this.candidateName = candidateName;
 		this.city = city;
 		this.pincode = pincode;
+		this.numbercount = numbercount;
 	}
+
+
+
+	public int getNumbercount() {
+		return numbercount;
+	}
+
+
+
+	public void setNumbercount(int numbercount) {
+		this.numbercount = numbercount;
+	}
+
 
 
 	public ManageCandidate() {
 		super();
 	}
+
 
 
 	public int getCandidateId() {
