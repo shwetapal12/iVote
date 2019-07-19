@@ -62,9 +62,10 @@ else{
 								<label class="custom-control-label" for="customControlInline">Remember me</label>
 							</div>
 						</div>
-                                        <div class="d-flex justify-content-center mt-3 login_container">
-                                    <input type="submit" name="button" class="btn login_btn" value="Login">
-				</div>
+              <div class="d-flex justify-content-center mt-3 login_container">
+              	 <input type="submit" name="button" class="btn login_btn" value="Login">
+              	  
+			</div>
 					</form>
 				</div>
 				

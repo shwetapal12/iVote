@@ -75,7 +75,11 @@ if (session.getAttribute("name") != null)
             
 				</div>                      
         </form>
-        <button id="sub" class="btn btn-success btn-block">Add Candidate</button>
+        <div >
+       	 	<button id="sub" class="btn btn-success btn-block">Add Candidate</button>
+       	 	
+        	<!-- <input type="reset" class=" col-6 btn btn-dark " value="Reset" style="float: right;"> -->
+        </div>
         </div><br><br>
         <h3 style="color: blue ;font-family: Sans-serif ; text-align: center;">Available Candidates</h3><br>
         <div id="demo" class="container"></div>
