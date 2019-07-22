@@ -36,6 +36,12 @@
   	<description></description>
   	<servlet-class>com.controllers.Logout</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ResultCount</servlet-name>
+  	<display-name>ResultCount</display-name>
+  	<description></description>
+  	<servlet-class>com.controllers.ResultCount</servlet-class>
+  </servlet>
   
   <servlet-mapping> 
   	<servlet-name>ShowCandidates</servlet-name>
@@ -58,11 +64,8 @@
   	<url-pattern>/Logout</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>servlet1</servlet-name>
-  	<url-pattern>/servlet1</url-pattern>
+  	<servlet-name>ResultCount</servlet-name>
+  	<url-pattern>/ResultCount</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>servlet2</servlet-name>
-  	<url-pattern>/servlet2</url-pattern>
-  </servlet-mapping>
-</web-app>
+
+ </web-app>

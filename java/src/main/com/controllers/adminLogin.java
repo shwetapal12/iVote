@@ -31,7 +31,7 @@ public class adminLogin extends HttpServlet {
 		String m_UserName= request.getParameter("UserName");
 		String m_Password= request.getParameter("Password");
 		out.print(m_UserName);
-		out.print(m_Password);
+	
 		
 		if(m_UserName.equals("iVote") && m_Password.equals("123456"))
 		{

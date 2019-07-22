@@ -12,9 +12,9 @@ public class TimerDemo extends TimerTask {
 	public void run() {
 	System.out.println("running application"+ ++count+" times");
 	System.out.println(d);
-	System.out.println(d.getMinutes());
+	//System.out.println(d.getMinutes());
 	
-	if(d.getMinutes()>20) 
+	//if(d.getMinutes()>20) 
     { 
         synchronized(Application.obj) 
         { 

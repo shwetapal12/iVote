@@ -73,7 +73,7 @@
 		   
 			 out.println("<tr><td>"+manage_Candidate.getCandidateName()+
 						"</td><td>"+manage_Candidate.getCity()+"</td><td>"+manage_Candidate.getPincode()+
-						"</td><td> <a href='deleteCandidate/?id='"+manage_Candidate.candidateId+" name='button' class='btn btn-danger' >Delete Candidate</a></td></tr>");
+						"</td><td> <a href='deleteCandidate/?id='"+manage_Candidate.getCandidateId()+" name='button' class='btn btn-danger' >Delete Candidate</a></td></tr>");
 			 
 		}
 		 }

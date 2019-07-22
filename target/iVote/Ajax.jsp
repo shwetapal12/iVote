@@ -47,15 +47,23 @@ $.ajax({
 </script>
 </head>
 <body>
+<%  session = request.getSession(false);
+response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+if (session.getAttribute("name") != null)
+	{
+%>
+<h4 class="text-success">Welcome <%out.print(session.getAttribute("name")); %></h4>
+
 <br><br>
 <div class="container">
+
   <form class="form" >
                 <div class="form-group ">
                     <label class="col-3"><b>Candidate Name</b></label>
                     <input type="text" id ="CandidateName"  name="CandidateName" placeholder="Candidate Name" class="form-control col-12" required="required">
                 </div>
                 
-<div class="form-group ">
+<div class="form-group">
                     <label class="col-3"><b>City</b></label>
                     <input type="text" placeholder="City" name="City" class="form-control col-12" id="City" required="required">
                 </div> 
@@ -67,10 +75,20 @@ $.ajax({
             
 				</div>                      
         </form>
-        <button id="sub" class="btn btn-success btn-block">Add Candidate</button>
+        <div >
+       	 	<button id="sub" class="btn btn-success btn-block">Add Candidate</button>
+       	 	
+        	<!-- <input type="reset" class=" col-6 btn btn-dark " value="Reset" style="float: right;"> -->
+        </div>
         </div><br><br>
         <h3 style="color: blue ;font-family: Sans-serif ; text-align: center;">Available Candidates</h3><br>
         <div id="demo" class="container"></div>
 </body>
  <%@include file="Footer.jsp" %> 
 </html>
+<% }
+else
+{
+		response.sendRedirect("Logout");
+	}
+	%>
