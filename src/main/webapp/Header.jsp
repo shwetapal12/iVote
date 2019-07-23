@@ -15,11 +15,25 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+ 
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="src/main/webapp/Css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="src/main/webapp/Css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="src/main/webapp/Css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="src/main/webapp/Css/flexslider.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="src/main/webapp/Css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
 </head>
 <body> <div>          
         
-            <nav class="navbar navbar-expand-md bg-warning">
-                <a href="#" class="navbar-brand"><b>iVote</b></a>
+           <!--  <nav class="navbar navbar-expand-md " style="background-color: 	#120A8F		">
+                <a href="Home.jsp" class="navbar-brand" style="color:white"><b>iVote</b></a>
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#nav1">
                     <span class="navbar-toggler-icon"></span>
                 </button>   
@@ -29,31 +43,53 @@
            
                   <ul class="navbar-nav mr-auto offset-3">
             <li class="nav-item ">
-                <a href="Home.jsp" class="nav-link active">Home</a>
+                <a href="Home.jsp" class="nav-link active"style="color:white">Home</a>
             </li>&emsp;
-             <!-- <li class="nav-item">
+             <li class="nav-item">
                 <a href="#" class="nav-link">Manage Adminstration</a>
             </li>&emsp;
             
              <li class="nav-item ">
                 <a href="#" class="nav-link">Manage City</a>
-            </li>&emsp; -->
+            </li>&emsp;
              <li class="nav-item">
-                <a href="Ajax.jsp" class="nav-link">Manage Candidate</a>
+                <a href="Ajax.jsp" class="nav-link" style="color:white">Manage Candidate</a>
             </li>  &emsp; 
              <li class="nav-item">
-                <a href="PollResult.jsp" class="nav-link">Poll Result</a>
+                <a href="ResultCount.jsp" class="nav-link" style="color:white">Poll Result</a>
             </li> &emsp;
              <li class="nav-item">
-                <a href="Logout" class="nav-link">Logout</a>
+                <a href="Logout" class="nav-link" style="color:white">Logout</a>
             </li> &emsp;
             </ul>
              
                    </div>
                     
                   </nav>
-         
+                  </div>
+          -->
+          
+          <div id="fh5co-page">
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<div class="row">
+				<div class="header-inner">
+					<h1><a href="index.html">iVote</a></h1>
+					<nav role="navigation">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Current Poll</a></li>
+							<li><a href="#">About Us</a></li>
+                                                        <li><a href="#">Help</a></li>
+							<li class="cta"><a href="#">Contact us</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
         </div>
+      
 
 </body>
 </html>

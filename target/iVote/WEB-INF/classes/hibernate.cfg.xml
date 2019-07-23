@@ -11,7 +11,8 @@
         <property name="hibernate.connection.username">group004</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <property name="show_sql">true</property>
-      <mapping resource="ManageCandidate.hbm.xml"/> 
+    <mapping resource="ManageCandidate.hbm.xml"/>
+       
        <!--  <mapping class="com.cdac.OneToOne.Vehicle"/>
         <mapping class="com.cdac.OneToOne.VehicleOwner"/> -->
        <!--  <mapping resource="Product.hbm.xml"/> -->

@@ -42,7 +42,7 @@
                 <a href="Ajax.jsp" class="nav-link">Manage Candidate</a>
             </li>  &emsp; 
              <li class="nav-item">
-                <a href="PollResult.jsp" class="nav-link">Poll Result</a>
+                <a href="ResultCount.jsp" class="nav-link">Poll Result</a>
             </li> &emsp;
              <li class="nav-item">
                 <a href="Logout" class="nav-link">Logout</a>

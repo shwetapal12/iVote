@@ -23,32 +23,35 @@
          <div class="row">
             <div class="col-md-6 ">
                <div class="logo-part">
-                  <img src="https://i.ibb.co/sHZz13b/logo.png" class="w-50 logo-footer" >
-                  <p>7637 Laurel Dr. King Of Prussia, PA 19406</p>
-                  <p>Use this tool as test data for an automated system or find your next pen</p>
+                  <!-- <img src="https://i.ibb.co/sHZz13b/logo.png" class="w-50 logo-footer" > -->
+                  <h1>iVote</h1>
+                  <p style="text-align: auto;">Secure Voting is a complete solution for online election system.
+                   Electronic voting system is 100% web based, easy to use, most convenient, 
+                   user friendly and integrated with ultimate security features. Our Internet voting system is a flexible, 
+                   feature-rich election service ideal for all types of organizations large and small.</p>
                </div>
             </div>
             <div class="col-md-6 px-4">
                <h6> About Company</h6>
-               <p>But horizontal lines can only be a full pixel high.</p>
-               <a href="#" class="btn-footer"> More Info </a><br>
-               <a href="#" class="btn-footer"> Contact Us</a>
+               <p>achieve excellence in providing secure and efficient application and to create value for our clients.</p>
+               <!-- <a href="#" class="btn-footer"> More Info </a><br>
+               <a href="#" class="btn-footer"> Contact Us</a> -->
             </div>
          </div>
       </div>
       <div class="col-md-6">
          <div class="row">
             <div class="col-md-6 px-4">
-               <h6> Help us</h6>
+               <h6> Quick Links</h6>
                <div class="row ">
-                  <div class="col-md-6">
+                  <div class="col-md-7">
                      <ul>
-                        <li> <a href="home.jsp"> Home</a> </li>
-                        <li> <a href="#"> About</a> </li>
+                        <li> <a href="Home.jsp"> Home</a> </li>
+                        <!-- <li> <a href="#"> About</a> </li> -->
                         <li> <a href="Ajax.jsp"> Manage Candidate</a> </li>
-                        <li> <a href="PollResult.jsp">Poll Result</a> </li>
-                        <li> <a href="#"> Help</a> </li>
-                        <li> <a href="#"> Contact</a> </li>
+                        <li> <a href="ResultCount.jsp">Poll Result</a> </li>
+                        <!-- <li> <a href="#"> Help</a> </li> -->
+                        <!-- <li> <a href="#"> Contact</a> </li> -->
                      </ul>
                   </div>
                 
@@ -61,7 +64,7 @@
                   <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                </div>
               
-               <p>That's technology limitation of LCD monitors</p>
+               <p>Get in touch with us to learn how we can run next election for your organization together</p>
             </div>
          </div>
       </div>

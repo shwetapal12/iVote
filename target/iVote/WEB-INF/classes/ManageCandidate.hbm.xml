@@ -5,11 +5,11 @@
 
 <hibernate-mapping>
 <class name="com.model.ManageCandidate"  table="managecandidate">
-	<id name="CandidateId" type="int">
+	<id name="candidateId" type="int">
 		<generator class="assigned"/>
 		</id>
-		<property name="CandidateName" type="java.lang.String">
-		    <column name="CandidateName" />
+		<property name="candidateName" type="java.lang.String">
+		    <column name="candidateName" />
 		</property>
 		<property name="city" type="java.lang.String">
 		    <column name="city" />

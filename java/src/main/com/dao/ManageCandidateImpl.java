@@ -16,13 +16,10 @@ import org.hibernate.*;
 import com.model.ManageCandidate;
 
 import com.util.HibernateGet;
-
-
-
 public class ManageCandidateImpl implements ManageCandidateDao {
-
+	
 	public List<ManageCandidate> showAll() {
-		Session session =null;// sessionFactory.openSession();
+		Session session =null;
 		Transaction tx=null;
 		List<ManageCandidate> eList=null;
 		try{
@@ -34,14 +31,11 @@ public class ManageCandidateImpl implements ManageCandidateDao {
 	         Root<ManageCandidate> root = query.from(ManageCandidate.class);
 	         query.select(root);
 	         Query<ManageCandidate> q=session.createQuery(query);
-	         eList=q.getResultList();
-	       /*  for (Employee employee : eList) {
-	            System.out.println(employee);
-	         }*/
+	         eList=q.getResultList();	      
 	         tx.commit();		
 		}finally{
 		session.close();
-		//HibernateUtil.closeSessionFactory();
+		
         }
 
         return eList;
@@ -57,11 +51,10 @@ public class ManageCandidateImpl implements ManageCandidateDao {
 			tx = session.beginTransaction();
 
 	      id= (Integer) session.save(p);
-	    //  System.out.println();
-	         tx.commit();		
+	      tx.commit();		
 		}finally{
 		session.close();
-		//HibernateUtil.closeSessionFactory();
+		//HibernateGet.closeSessionFactory();
         }
 		
 		return id;
@@ -73,24 +66,37 @@ public class ManageCandidateImpl implements ManageCandidateDao {
 		try{
 			session=HibernateGet.getSession();
 			tx = session.beginTransaction();
-            ManageCandidate m= session.get(ManageCandidate.class, id);
-            session.delete(m);
-	    
+            ManageCandidate m= session.load(ManageCandidate.class, id);
+            session.delete(m);	    
 	         tx.commit();		
 		}catch (HibernateException e) {
 			e.printStackTrace();
+			tx.rollback();
 		}
 		finally{
 		session.close();
-		//HibernateUtil.closeSessionFactory();
-        }
 		
-		return id;
-		
+        }		
+		return id;		
 	}
-	
+	@Override
+	public void updateCount(int id) {
 
+		Session session =null;
+		Transaction tx=null;
+		try{ 
+			ManageCandidate mngcandidate = session.load(ManageCandidate.class, id);
+			int count= mngcandidate.getNumbercount();
+			mngcandidate.setCandidateId(id);  // id must be in the DB
+			mngcandidate.setNumbercount(count+1);
+			session.update(mngcandidate);
+	         tx.commit();		
+		}finally{
+		session.close();
+		//HibernateGet.closeSessionFactory();
+        }		
 	}
+}
 
 	
 

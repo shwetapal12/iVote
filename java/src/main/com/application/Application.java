@@ -7,41 +7,48 @@ import javax.persistence.criteria.*;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+
+import com.dao.ManageCandidateDao;
+import com.dao.ManageCandidateImpl;
 import com.model.ManageCandidate;
-import com.util.HibernateGet;
+
 
 public class Application {
 	
 	
 	public static void main(String[] args) {
-		Session session =null;// sessionFactory.openSession();
+		Session session =null;
 		Transaction tx=null;
-		try{
-			session=HibernateGet.getSession();
-			tx = session.beginTransaction();
-	         CriteriaBuilder builder = session.getCriteriaBuilder();
-	         CriteriaQuery<ManageCandidate> query = builder.createQuery(ManageCandidate.class);
-	         Root<ManageCandidate> root = query.from(ManageCandidate.class);
-	         query.select(root);
-	        Query<ManageCandidate> q=session.createQuery(query);
-	         List<ManageCandidate> manageCandidate=q.getResultList();
+
+		ManageCandidateDao mdao= new ManageCandidateImpl();
+		 List<ManageCandidate> manageCandidate=mdao.showAll();
 	         for (ManageCandidate manage_Candidate : manageCandidate) {
 	            System.out.println(manage_Candidate);
 	         }
+	         
+	         
+	         System.out.println(mdao.delete(34));
+	         
+	         
 	       //=======================================================
 	         //TO PRINT COUNT
 	         
-	         
-	       String SQL_QUERY = "SELECT COUNT(*) FROM ManageCandidate group by candidateName";
-	        // String SQL_QUERY ="select NumberOfVotes from ResultCount order by count desc";
+	         String SQL_QUERY = "SELECT candidateId, candidateName, numbercount FROM ManageCandidate order by numbercount desc";
 	         Query query1 = session.createQuery(SQL_QUERY);
-	           
-	         for(Iterator it=query1.iterate();it.hasNext();)
-	         {
-	          long row = (Long) it.next();
-	          System.out.print("Count: " + row);
-	         }
-	        // ============================================================================
+	         
+	         List<Object[]> collection1 = query1.getResultList(); 
+	     	
+	     	
+	     	System.out.println("Retrieving values in multiple columns ");
+	     	 for(Object[] user: collection1)
+	     	 {
+	     		 System.out.println("Id : " +(Integer)user[0]);
+	     		 System.out.println("Id : " +user[1]);
+	     		 System.out.println("First Name : " +(Integer) user[2]);
+	     		 System.out.println();
+	     	 }     
+//	         
+//	        // ============================================================================
 	         
 	         
 	       //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -52,19 +59,12 @@ public class Application {
 //	      int id= sc.nextInt();   
 //	      ManageCandidate mngcandidate = session.load(ManageCandidate.class, id);
 //	     int count= mngcandidate.getNumbercount();
-//	      mngcandidate.setCandidateId(id);  // 104 must be in the DB
+//	      mngcandidate.setCandidateId(id);  // id must be in the DB
 //	      mngcandidate.setNumbercount(count+1);
 //	      session.update(mngcandidate);
-	         
+//	         
 	//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++////////////
-		tx.commit();
-		}
-		catch (Exception e) {
-			System.out.println(e);
-		}		
-		finally{			
-				session.close();		
-		}
+
 	}
 	
 }

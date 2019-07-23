@@ -1,5 +1,4 @@
 package com.login;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -16,40 +15,23 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import com.dao.ManageCandidateDao;
+import com.dao.ManageCandidateImpl;
 import com.model.ManageCandidate;
 import com.util.HibernateGet;
-
-/**
- * Servlet implementation class ShowCandidates
- */
 public class ShowCandidates extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+   
     public ShowCandidates() {
         super();
-        // TODO Auto-generated constructor stub
+        
     }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Session s =null;
-		Transaction tx=null; 		
-		 try{
-			 s=HibernateGet.getSession();
-		 tx = s.beginTransaction();
-		CriteriaBuilder builder = s.getCriteriaBuilder();
-		CriteriaQuery<ManageCandidate> query = builder.createQuery(ManageCandidate.class);
-		Root<ManageCandidate> root = query.from(ManageCandidate.class);
-		query.select(root);
-		Query<ManageCandidate> q=s.createQuery(query);
-		List<ManageCandidate> manageCandidate=q.getResultList();
+		
+		ManageCandidateDao mdao= new ManageCandidateImpl();
+		 List<ManageCandidate> manageCandidate=mdao.showAll();			
 		PrintWriter out= response.getWriter();
-		out.write("<table class=\"table table-stripped\"><tr><th>Candidate Name</th><th>Candidate City</th>\r\n" + 
+		out.write("<table class=\"table table-stripped table-primary\"><tr><th>Candidate Name</th><th>Candidate City</th>\r\n" + 
 				" <th>Pincode</th>\r\n" + 
 				"	<th>Action</th></tr>");
 		for (ManageCandidate manage_Candidate : manageCandidate)
@@ -62,18 +44,8 @@ public class ShowCandidates extends HttpServlet {
 			 
 		}
 		out.write("</table>");
-		 }
-		 catch(Exception e)
-		 {
-			 e.printStackTrace();
-		 }finally{
-			 s.close();
-		 }
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);

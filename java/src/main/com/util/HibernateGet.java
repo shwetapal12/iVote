@@ -35,12 +35,12 @@ public class HibernateGet {
 		return session;
 	}
 
-	public static void closeSessionFactory() {
-		if (registry != null) {
-			StandardServiceRegistryBuilder.destroy(registry);
-		}
-		sessionFactory.close();
-	}
+//	public static void closeSessionFactory() {
+//		if (registry != null) {
+//			StandardServiceRegistryBuilder.destroy(registry);
+//		}
+//		sessionFactory.close();
+//	}
 
 		
 

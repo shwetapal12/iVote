@@ -23,15 +23,17 @@ public class Logout extends HttpServlet {
 		PrintWriter out= response.getWriter();
 		HttpSession session = request.getSession(false);
 		
-//		session.invalidate();
-//		request.getSession().invalidate();
-//		response.sendRedirect("Adminlogin.jsp");
 		 session.removeAttribute("name");
 		    session.invalidate();
 		    response.sendRedirect("Adminlogin.jsp");		   
 	
 		
 	}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
 
 	
 }
