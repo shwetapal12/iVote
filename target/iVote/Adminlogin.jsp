@@ -17,7 +17,7 @@
 
 </head>
 <body>
-<% // session = request.getSession(false);
+ <%  session = request.getSession(false);
 response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
 
 if (session.getAttribute("name") != null)
@@ -25,7 +25,7 @@ if (session.getAttribute("name") != null)
 	response.sendRedirect("Logout");
 	}
 else{
-%>
+%> 
 
 	<div class="container h-100">
 		<div class="d-flex justify-content-center h-100">
@@ -37,8 +37,8 @@ else{
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
-                 <!--   <form action="Home.jsp" method="post">  -->
-                    <form action="adminLogin" method="post"> 
+                    <!-- <form action="Home.jsp" method="post">  --> 
+                  <form action="adminLogin" method="post"> 
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -56,35 +56,19 @@ else{
 			        			out.println(request.getAttribute("errorMessage"));
 			   				 }
 						%></span>
-						<div class="form-group">
-							<div class="custom-control custom-checkbox">
-								<input type="checkbox" class="custom-control-input" id="customControlInline">
-								<label class="custom-control-label" for="customControlInline">Remember me</label>
-							</div>
-						</div>
               <div class="d-flex justify-content-center mt-3 login_container">
               	 <input type="submit" name="button" class="btn login_btn" value="Login">
               	  
 			</div>
 					</form>
-				</div>
-				
-				<div class="mt-4">
-					<div class="d-flex justify-content-center links">
-						Don't have an account? <a href="#" class="ml-2">Sign Up</a>
-					</div>
-					<div class="d-flex justify-content-center links">
-                                            <a href="#">Forgot your password?</a>
-					</div>
-				</div>
-								
+				</div>								
 			</div>
 		</div>
 	</div>
 </body>
 
 </html>
-<% 	}	%>
+ <% 	}	%> 
 
 
 

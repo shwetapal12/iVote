@@ -14,12 +14,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%  session = request.getSession(false);
-response.setHeader("Cache-Control","no-cache ,no-store,must-revalidate");
+ <%  session = request.getSession(false);
 if (session.getAttribute("name") != null)
 {
 %>
-<h4 class="text-success">Welcome <%out.print(session.getAttribute("name")); %></h4>
+<h4 class="text-success">Welcome <%out.print(session.getAttribute("name")); %></h4> 
 <%
 Session s=null;// sessionFactory.openSession();
 Transaction tx=null;
@@ -33,10 +32,11 @@ try{
 	System.out.println("Retrieving values in multiple columns ");	
 	%>
 	<div class="container">
-	<table class="table table-stripped table-primary"><tr><th>Candidate Id</th><th>Candidate Name</th><th>Vote Count</th>
+	<table class="table table-bordered table-striped"><tr><th>Candidate Id</th><th>Candidate Name</th><th>Vote Count</th>
 		<%for(Object[] user: collection1)
 	 {%>
-		 <tr><td><%=(Integer)user[0]%></td><td><%=user[1]%></td><td><%=(Integer) user[2] %></td></tr>
+		 <tr><td><%=(Integer)user[0]%></td><td><%=user[1]%></td><td><%=(Integer) user[2] %></td>
+		 <td><input type="radio" name="radioButton" id="<%=(Integer)user[0]%>"></td></tr>
 		<%		
 	 }      	
    		 tx.commit();
@@ -49,9 +49,9 @@ try{
 </body>
 <%@include file="Footer.jsp" %>
 </html>
-<% }
+ <% }
 else
 {
 		response.sendRedirect("Logout");
 	}
-	%>
+	%> 

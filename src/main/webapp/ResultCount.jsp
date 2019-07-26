@@ -35,7 +35,10 @@ try{
 	<table class="table table-bordered table-striped"><tr><th>Candidate Id</th><th>Candidate Name</th><th>Vote Count</th>
 		<%for(Object[] user: collection1)
 	 {%>
-		 <tr><td><%=(Integer)user[0]%></td><td><%=user[1]%></td><td><%=(Integer) user[2] %></td></tr>
+		 <tr>
+		 <td><%=(Integer)user[0]%></td>
+		 <td><%=user[1]%></td><td><%=(Integer) user[2] %></td>
+		 </tr>
 		<%		
 	 }      	
    		 tx.commit();

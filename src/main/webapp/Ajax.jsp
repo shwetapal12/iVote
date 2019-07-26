@@ -19,14 +19,12 @@ $(document).ready(function(){
 	$.ajax({
 		
 		type:'GET',
-		url:'ShowCandidates',
-		
+		url:'ShowCandidates',		
 		success: function(result){
 			//alert("On inside"+$("#CandidateName").val());
 	        $('#demo').html(result);
 	    }
-	});
-	
+	});	
 
 	$("#sub").click(function(){
 		//alert("Loaded Button"+$("#CandidateName").val());
@@ -48,7 +46,7 @@ $.ajax({
 </head>
 <body>
  <%  session = request.getSession(false);
-//response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
 if (session.getAttribute("name") != null)
 	{
 %> 

@@ -36,6 +36,18 @@
   	<description></description>
   	<servlet-class>com.controllers.Logout</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>DisableUserAfterVote</servlet-name>
+  	<display-name>DisableUserAfterVote</display-name>
+  	<description></description>
+  	<servlet-class>com.controllers.DisableUserAfterVote</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SubmitVote</servlet-name>
+  	<display-name>SubmitVote</display-name>
+  	<description></description>
+  	<servlet-class>com.controllers.SubmitVote</servlet-class>
+  </servlet>
   <servlet-mapping> 
   	<servlet-name>ShowCandidates</servlet-name>
   	<url-pattern>/ShowCandidates</url-pattern>
@@ -56,4 +68,15 @@
   	<servlet-name>Logout</servlet-name>
   	<url-pattern>/Logout</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DisableUserAfterVote</servlet-name>
+  	<url-pattern>/DisableUserAfterVote</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SubmitVote</servlet-name>
+  	<url-pattern>/SubmitVote</url-pattern>
+  </servlet-mapping>
+   <welcome-file-list>  
+   <welcome-file>Adminlogin.jsp</welcome-file>    
+  </welcome-file-list>  
   </web-app>

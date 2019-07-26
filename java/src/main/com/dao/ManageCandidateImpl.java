@@ -54,7 +54,7 @@ public class ManageCandidateImpl implements ManageCandidateDao {
 	      tx.commit();		
 		}finally{
 		session.close();
-		//HibernateGet.closeSessionFactory();
+		
         }
 		
 		return id;
@@ -85,6 +85,7 @@ public class ManageCandidateImpl implements ManageCandidateDao {
 		Session session =null;
 		Transaction tx=null;
 		try{ 
+			
 			ManageCandidate mngcandidate = session.load(ManageCandidate.class, id);
 			int count= mngcandidate.getNumbercount();
 			mngcandidate.setCandidateId(id);  // id must be in the DB
@@ -92,7 +93,7 @@ public class ManageCandidateImpl implements ManageCandidateDao {
 			session.update(mngcandidate);
 	         tx.commit();		
 		}finally{
-		session.close();
+		//session.close();
 		//HibernateGet.closeSessionFactory();
         }		
 	}

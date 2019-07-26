@@ -36,7 +36,7 @@ else{
 						<img src=  "images/logo.jpg"  class="brand_logo" alt="Logo">
 					</div>
 				</div>
-			+	<div class="d-flex justify-content-center form_container">
+				<div class="d-flex justify-content-center form_container">
                     <!-- <form action="Home.jsp" method="post">  --> 
                   <form action="adminLogin" method="post"> 
 						<div class="input-group mb-3">

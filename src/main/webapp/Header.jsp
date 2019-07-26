@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+ <html>
 <head>
 <meta charset="ISO-8859-1">
  <title>TODO supply a title</title>
@@ -32,7 +32,7 @@
 </head>
 <body> <div>          
         
-           <!--  <nav class="navbar navbar-expand-md " style="background-color: 	#120A8F		">
+       <nav class="navbar navbar-expand-md " style="background-color: 	#120A8F		">
                 <a href="Home.jsp" class="navbar-brand" style="color:white"><b>iVote</b></a>
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#nav1">
                     <span class="navbar-toggler-icon"></span>
@@ -45,14 +45,8 @@
             <li class="nav-item ">
                 <a href="Home.jsp" class="nav-link active"style="color:white">Home</a>
             </li>&emsp;
-             <li class="nav-item">
-                <a href="#" class="nav-link">Manage Adminstration</a>
-            </li>&emsp;
-            
-             <li class="nav-item ">
-                <a href="#" class="nav-link">Manage City</a>
-            </li>&emsp;
-             <li class="nav-item">
+       
+          <li class="nav-item">
                 <a href="Ajax.jsp" class="nav-link" style="color:white">Manage Candidate</a>
             </li>  &emsp; 
              <li class="nav-item">
@@ -67,29 +61,10 @@
                     
                   </nav>
                   </div>
-          -->
-          
-          <div id="fh5co-page">
-	<header id="fh5co-header" role="banner">
-		<div class="container">
-			<div class="row">
-				<div class="header-inner">
-					<h1><a href="index.html">iVote</a></h1>
-					<nav role="navigation">
-						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">Current Poll</a></li>
-							<li><a href="#">About Us</a></li>
-                                                        <li><a href="#">Help</a></li>
-							<li class="cta"><a href="#">Contact us</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
-        </div>
-      
-
 </body>
-</html>
+</html> 
+
+
+
+
+
