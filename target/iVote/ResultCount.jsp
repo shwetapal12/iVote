@@ -15,6 +15,7 @@
 </head>
 <body>
  <%  session = request.getSession(false);
+ response.setHeader("Cache-Control","no-cache ,no-store,must-revalidate");
 if (session.getAttribute("name") != null)
 {
 %>
@@ -35,8 +36,10 @@ try{
 	<table class="table table-bordered table-striped"><tr><th>Candidate Id</th><th>Candidate Name</th><th>Vote Count</th>
 		<%for(Object[] user: collection1)
 	 {%>
-		 <tr><td><%=(Integer)user[0]%></td><td><%=user[1]%></td><td><%=(Integer) user[2] %></td>
-		 <td><input type="radio" name="radioButton" id="<%=(Integer)user[0]%>"></td></tr>
+		 <tr>
+		 <td><%=(Integer)user[0]%></td>
+		 <td><%=user[1]%></td><td><%=(Integer) user[2] %></td>
+		 </tr>
 		<%		
 	 }      	
    		 tx.commit();

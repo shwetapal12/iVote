@@ -15,6 +15,7 @@
 </head>
 <body>
  <%  session = request.getSession(false);
+ response.setHeader("Cache-Control","no-cache ,no-store,must-revalidate");
 if (session.getAttribute("name") != null)
 {
 %>
