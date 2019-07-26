@@ -14,9 +14,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
    <link href="Css/footer.css" rel="stylesheet">
+   <style>
+   /* footer {
+    position: relative;
+    bottom: 50px;
+    height: 100px;
+    width: 100%;
+} */
+   </style>
 </head>
 
-<footer class="container-fluid bg-grey py-5 footer">
+<footer class="container-fluid bg-grey py-5 footer " >
 <div class="container">
    <div class="row">
       <div class="col-md-6">

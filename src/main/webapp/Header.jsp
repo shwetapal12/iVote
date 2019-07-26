@@ -43,9 +43,7 @@
            
                   <ul class="navbar-nav mr-auto offset-3">
             <li class="nav-item ">
-                <a href="Home.jsp" class="nav-link active"style="color:white">Home</a>
-            </li>&emsp;
-       
+                  
           <li class="nav-item">
                 <a href="Ajax.jsp" class="nav-link" style="color:white">Manage Candidate</a>
             </li>  &emsp; 

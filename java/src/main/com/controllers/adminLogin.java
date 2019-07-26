@@ -37,7 +37,7 @@ public class adminLogin extends HttpServlet {
 			
 			 session= request.getSession(true);
 			session.setAttribute("name", m_UserName);
-			response.sendRedirect("Home.jsp");
+			response.sendRedirect("Ajax.jsp");
 		}
 		else
 		{
